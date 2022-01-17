@@ -2,13 +2,13 @@
 
 If you only want the highlights here they are:
 
-* It's about to develop incrementally
+* It's about developing incrementally
 * The challenge is to find the right increments
-* Separate problems from solution
+* Separate problem from solution
 * Value is what we want
 * There is always more than one way to get there
-* Use it to guide the implementation
-* Reduce the scope doing engineering
+* Use it to guide implementation
+* Reduce scope doing engineering
 * An increment implementation without quality is a spike
 * Don't release each slice
 
@@ -17,18 +17,18 @@ if you want to know a bit more, continue reading.
 
 # Why?
 
-Develop is a researching process and vertical slicing provides us with a mechanic to apply the scientific model to this process. We make hypothesis and get fast feedback to validate or reject them. Additionally, through the development of narrow slices we can provide value sooner and react to changes or error faster. 
+Developing is a researching process and vertical slicing provides us with a tool to apply the scientific model to this process. We make hypothesis and get fast feedback to validate or reject them. Additionally, through the development of narrow slices we can provide value sooner and react to changes or error faster. 
 
-We start digging onto this topic because we think we can improve our delivery rate narrowing the scope of our user stories.
+We start digging into this topic because we think we can improve our delivery rate narrowing the scope of our user stories.
 
 # How?
 
-To start learning about this topic we followed the guide wrote by Abraham Vallez [1](https://abrahamvallez.medium.com/vertical-slicing-i-desaprende-lo-que-sabes-sobre-user-stories-y-pon-el-foco-en-desarrollo-b859c5827326). It's very recommendable and not only because it is easy to read and to understand, but as well because it's full of references where you can learn much more. Before starting, you should try to forget anything you know about other techniques and focus on what Abraham tells. There will be time to look for similitude and contradictions, but if you don't want to spend the reading fighting with you preconceived ideas I totally recommend you start with a fresh mindset.
+To start learning about this topic we follow the guide wrote by Abraham Vallez [1](https://abrahamvallez.medium.com/vertical-slicing-i-desaprende-lo-que-sabes-sobre-user-stories-y-pon-el-foco-en-desarrollo-b859c5827326). It's very recommendable and not only because it is easy to read and to understand, but as well because it's full of references where you can learn much more. Before starting, you should try to forget anything you know about other techniques and focus on what Abraham tells. There will be time to look for similitudes and contradictions, but if you don't want to spend the reading fighting with you preconceived ideas I totally recommend you start with a fresh mindset.
 
 I think I am not spoiling the party if I advance you some of the main ideas I have gotten from these readings:
 
 **An increment provides value if it gives us feedback to reach our final goals**
-As Ron Jeffriess explain in "The Nature of Software Development" [2](https://pragprog.com/titles/rjnsd/the-nature-of-software-development/) value is what we want, what matters to us, and it isn't only one thing. Usually there are a bunch of things that are important for the team and feedback is one of them. If the output of the slice is real software working whose outcome is any kind of information we can consider that the increment is good enough.
+As Ron Jeffries explain in "The Nature of Software Development" [2](https://pragprog.com/titles/rjnsd/the-nature-of-software-development/) value is what we want, what matters to us, and it isn't only one thing. Usually there are a bunch of things that are important for the team and feedback is one of them. If the output of the slice is real software working whose outcome is any kind of information we can consider that the increment is good enough.
 
 **Separate the problem space from the solution space**
 When it comes to decompose a problem into activities, complexities, and variations it's essential to keep separated the problem from the solution. We developers accustomed to run towards the solution mixing everything and narrowing the spectrum of results that we can offer. In that process the simplest solutions used to vanish.
