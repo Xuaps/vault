@@ -31,12 +31,12 @@ I think I am not spoiling the party if I advance you some of the main ideas I ha
 As Ron Jeffries explain in "The Nature of Software Development" [2](https://pragprog.com/titles/rjnsd/the-nature-of-software-development/) value is what we want, what matters to us, and it isn't only one thing. Usually there are a bunch of things that are important for the team and feedback is one of them. If the output of the slice is real software working whose outcome is any kind of information we can consider that the increment is good enough.
 
 **Separate the problem space from the solution space**
-When it comes to decompose a problem into activities, complexities, and variations it's essential to keep separated the problem from the solution. We developers accustomed to run towards the solution mixing everything and narrowing the spectrum of results that we can offer. In that process the simplest solutions used to vanish.
+When it comes to decomposing a problem into activities, complexities, and variations it's essential to keep separated the problem from the solution. We developers are accustomed to run towards the solution mixing everything and narrowing the spectrum of results that we can offer. In that process the simplest solutions used to vanishing.
 
 **Apply different levels of abstraction to different areas**
 Vertical slicing is an iterative process. We start with a slice of the problem, and then we start developing a solution using vertical slicing. As we mentioned before these are two different arenas, and we need different mindsets to work in each of them. 
 
-**The right size for a slice is that that provides feedback**
+**The right size of a slice is one which provides feedback**
 No more, no less. Usually the difficulty isn't to find something extra to add, we are very good on that, but we need to remove the irrelevant keeping the essential to get the feedback we require.
 
 # Lessons learned
@@ -44,13 +44,13 @@ No more, no less. Usually the difficulty isn't to find something extra to add, w
 ## There is always more than one way to get there
 We repeated the exercise different days with different people. The slices were always different. To slice a problem is a kind of art. It takes time and practice to develop some skills to master this technique. The good thing was that none of the results was wrong. Furthermore, they were different in shape, but with a very similar intention and therefore a very similar result. 
 
-Fortunately, there are some strategies to help us with it, for example SPIDR[3](https://www.autentia.com/en/2018/07/23/spidr-una-tecnica-para-dividir-tus-historias-de-usuario/) offer us a framework to get some ideas about how to slice our problem.
+Fortunately, there are some strategies to help us with it, for example SPIDR[3](https://www.autentia.com/en/2018/07/23/spidr-una-tecnica-para-dividir-tus-historias-de-usuario/) offers us a framework to get some ideas about how to slice up our problem.
 
 
 ## Use it to guide the implementation
-Vertical slicing is not only about dividing the problem's space. It is about to guide the solution. We should implement small slices that give us quick feedback and allow us to move faster. It is tempting to split the user story once we have worked it out after a vertical slicing session. Front-end and back-end or React components and domain or Database model and whatever else you have. Although this approach works, it is easy to lose the big picture and get lost on technical details spoiling our initial intention of getting fast feedback through the simpler solution. 
+Vertical slicing is not only about dividing the problem's space. It is about guiding the solution. We should implement small slices that give us quick feedback and allow us to move faster. It is tempting to split the user story once we have worked it out after a vertical slicing session. Front-end and back-end or React components and domain or Database model and whatever else you have. Although this approach works, it is easy to lose the big picture and get lost on technical details spoiling our initial intention of getting fast feedback through the simpler solution. 
 
-I remember a road that will communicate Portada Alta with Malaga's University, they started building the road by both ends hoping to meet in the middle. However, when they reach the planned point both roads didn't match they had to create an impossible curve to communicate both roads. If that happens in an industry with years of experience, procedures, techniques and backed by physic and math it isn't difficult to see why it isn't  the best approach for us.
+I remember a road that would enjoin Portada Alta with Malaga's University, they started building the road by both ends hoping to meet in the middle. However, when they reach the planned point both roads didn't match they had to create an impossible curve to communicate both roads. If that happens in an industry with years of experience, procedures, techniques and backed by physics and maths it isn't difficult to see why it isn't the best approach for us.
 
 ## Reduce the scope doing engineering
 We can't reduce the value. We have chosen an increment that produces the value we are looking for, but we can reduce the technical scope. Applying engineering, thinking more and coding less, producing the same outcome with less output. This doesn't mean reduce the quality as we will see below. 
