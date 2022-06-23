@@ -11,7 +11,7 @@ From the very beginning I tried to use functional components and avoid class com
 
 That's all. So, why we started using it in a different way? Put too much logic in our UI/Components/whatever is a common mistake. Maybe that was the reason because the React's team came out with hooks, but it didn't make it better. The way for getting data from the outside world into the components was through the effect hook, and with it, all the problem came. The documentation proposed to make a fetch inside an effect with an empty dependency array. Sooner or later, we take advantage of it to add some transformations or even some domain logic and adding new dependencies on the dependencies' array and some logic to decide what was the reason because the effect was executed. Actually, what we were doing was to use effects to orchestrate our app, something React wasn't designed for.
 
-But, what I mean by logic and why is so bad to put too much into the components? I am going to distinguish between three types of logic:
+But, what do I mean by logic and why is so bad to put too much into the components? I am going to distinguish between three types of logic:
 
 * View logic: The checks that drive changes in our UI, i.e., when a value is higher than 5, change the color to red
 * Orchestration logic: The logic that controls the different paths the execution can take.
