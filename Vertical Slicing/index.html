@@ -1,0 +1,404 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>Vertical Slicing - Xuaps Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#why" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Xuaps Notes" class="md-header__button md-logo" aria-label="Xuaps Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Xuaps Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vertical Slicing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Xuaps Notes" class="md-nav__button md-logo" aria-label="Xuaps Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Xuaps Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Architecture%20definitions/" class="md-nav__link">
+        Architecture definitions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../React/" class="md-nav__link">
+        React
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Vertical Slicing
+      </a>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<p>If you only want the highlights here they are:</p>
+<ul>
+<li>It's about developing incrementally</li>
+<li>The challenge is to find the right increments</li>
+<li>Separate problem from solution</li>
+<li>Value is what we want</li>
+<li>There is always more than one way to get there</li>
+<li>Use it to guide implementation</li>
+<li>Reduce scope doing engineering</li>
+<li>An increment implementation without quality is a spike</li>
+<li>Don't release each slice</li>
+</ul>
+<p>if you want to know a bit more, continue reading.</p>
+<h1 id="why">Why?<a class="headerlink" href="#why" title="Permanent link">&para;</a></h1>
+<p>Developing is a researching process and vertical slicing provides us with a tool to apply the scientific model to this process. We make hypothesis and get fast feedback to validate or reject them. Additionally, through the development of narrow slices we can provide value sooner and react to changes or error faster. </p>
+<p>We start digging into this topic because we think we can improve our delivery rate narrowing the scope of our user stories.</p>
+<h1 id="how">How?<a class="headerlink" href="#how" title="Permanent link">&para;</a></h1>
+<p>To start learning about this topic we follow the guide wrote by Abraham Vallez <a href="https://abrahamvallez.medium.com/vertical-slicing-i-desaprende-lo-que-sabes-sobre-user-stories-y-pon-el-foco-en-desarrollo-b859c5827326">1</a>. It's very recommendable and not only because it is easy to read and to understand, but as well because it's full of references where you can learn much more. Before starting, you should try to forget anything you know about other techniques and focus on what Abraham tells. There will be time to look for similitudes and contradictions, but if you don't want to spend the reading fighting with you preconceived ideas I totally recommend you start with a fresh mindset.</p>
+<p>I think I am not spoiling the party if I advance you some of the main ideas I have gotten from these readings:</p>
+<p><strong>An increment provides value if it gives us feedback to reach our final goals</strong>
+As Ron Jeffries explain in "The Nature of Software Development" <a href="https://pragprog.com/titles/rjnsd/the-nature-of-software-development/">2</a> value is what we want, what matters to us, and it isn't only one thing. Usually there are a bunch of things that are important for the team and feedback is one of them. If the output of the slice is real software working whose outcome is any kind of information we can consider that the increment is good enough.</p>
+<p><strong>Separate the problem space from the solution space</strong>
+When it comes to decomposing a problem into activities, complexities, and variations it's essential to keep separated the problem from the solution. We developers are accustomed to run towards the solution mixing everything and narrowing the spectrum of results that we can offer. In that process the simplest solutions used to vanishing.</p>
+<p><strong>Apply different levels of abstraction to different areas</strong>
+Vertical slicing is an iterative process. We start with a slice of the problem, and then we start developing a solution using vertical slicing. As we mentioned before these are two different arenas, and we need different mindsets to work in each of them. </p>
+<p><strong>The right size of a slice is one which provides feedback</strong>
+No more, no less. Usually the difficulty isn't to find something extra to add, we are very good on that, but we need to remove the irrelevant keeping the essential to get the feedback we require.</p>
+<h1 id="lessons-learned">Lessons learned<a class="headerlink" href="#lessons-learned" title="Permanent link">&para;</a></h1>
+<h2 id="there-is-always-more-than-one-way-to-get-there">There is always more than one way to get there<a class="headerlink" href="#there-is-always-more-than-one-way-to-get-there" title="Permanent link">&para;</a></h2>
+<p>We repeated the exercise different days with different people. The slices were always different. To slice a problem is a kind of art. It takes time and practice to develop some skills to master this technique. The good thing was that none of the results was wrong. Furthermore, they were different in shape, but with a very similar intention and therefore a very similar result. </p>
+<p>Fortunately, there are some strategies to help us with it, for example SPIDR<a href="https://www.autentia.com/en/2018/07/23/spidr-una-tecnica-para-dividir-tus-historias-de-usuario/">3</a> offers us a framework to get some ideas about how to slice up our problem.</p>
+<h2 id="use-it-to-guide-the-implementation">Use it to guide the implementation<a class="headerlink" href="#use-it-to-guide-the-implementation" title="Permanent link">&para;</a></h2>
+<p>Vertical slicing is not only about dividing the problem's space. It is about guiding the solution. We should implement small slices that give us quick feedback and allow us to move faster. It is tempting to split the user story once we have worked it out after a vertical slicing session. Front-end and back-end or React components and domain or Database model and whatever else you have. Although this approach works, it is easy to lose the big picture and get lost on technical details spoiling our initial intention of getting fast feedback through the simpler solution. </p>
+<p>I remember a road that would enjoin Portada Alta with Malaga's University, they started building the road by both ends hoping to meet in the middle. However, when they reach the planned point both roads didn't match they had to create an impossible curve to communicate both roads. If that happens in an industry with years of experience, procedures, techniques and backed by physics and maths it isn't difficult to see why it isn't the best approach for us.</p>
+<h2 id="reduce-the-scope-doing-engineering">Reduce the scope doing engineering<a class="headerlink" href="#reduce-the-scope-doing-engineering" title="Permanent link">&para;</a></h2>
+<p>We can't reduce the value. We have chosen an increment that produces the value we are looking for, but we can reduce the technical scope. Applying engineering, thinking more and coding less, producing the same outcome with less output. This doesn't mean reduce the quality as we will see below. </p>
+<p>"Build what you must, buy what you can, and write it all down" (<a href="https://increment.com/teams/code-less-engineer-more/?utm_medium=earned-email&amp;utm_source=de19&amp;utm_campaign=GLOBAL_4df5&amp;utm_content=89c8&amp;utm_term=da67f7d830ef&amp;mkt_tok=MDcyLU1ESy0yODMAAAGBY3xK51VQT3urZs9rScedbX7GsjQ0lJOG6bCq6CxfZln2_jTwHpM5dYMuL-0wwZjVRjrf273PcYC2SPvRSfgaaZ40qN0agU6NaXvX0FaNrvbTca8">4</a>)</p>
+<h2 id="an-increment-implementation-without-quality-is-a-spike">An increment implementation without quality is a spike<a class="headerlink" href="#an-increment-implementation-without-quality-is-a-spike" title="Permanent link">&para;</a></h2>
+<p>To make vertical slicing works we must keep our code in good shape. If we are only concerned about fast delivery, sooner than later we will start running into our own code. The only way we can achieve its promise is finding a balance among technical excellence, simplicity and feasible solutions. How to get that balance is a topic for other post, but meanwhile, if you need help, take a look to XP.</p>
+<h2 id="dont-release-each-slice">Don't release each slice<a class="headerlink" href="#dont-release-each-slice" title="Permanent link">&para;</a></h2>
+<p>Not every increment has to be releasable. Independently if you are doing CD or not, or what is your branching strategy you have mechanism to hide these increments at the same time you still can get feedback. Feature flags are a good tool on this regard, but you have others. The most important thing is to understand that every increment should not constitute a release, keep it in mind when you start practicing this.</p>
+<h1 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h1>
+<p>As a product team our duty is to deliver value as soon as possible through a simple and high quality solution. Vertical slicing help us on getting the former, but is impossible without having the latter. </p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../React/" class="md-footer__link md-footer__link--prev" aria-label="Previous: React" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              React
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>
